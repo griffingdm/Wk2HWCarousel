@@ -62,14 +62,14 @@ Time spent: `4.5`
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2. 
+1. CGAffine Transform is used significantly differently than what was in the tutorial video. I think this is syntax that changed with Swift 3 
+2. Is it practical/possible to do a cross-dissolve animation (or other types of animation) between pages in a scroll view?
 
 ### Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/griffingdm/Wk2HWCarousel/blob/master/Carousel%20GIF.gif?raw=true' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
