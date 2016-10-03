@@ -23,7 +23,7 @@ class IntroScreenViewController: UIViewController, UIScrollViewDelegate {
     var yOffsets : [Float] = [-410, -350, -340, -408, -480, -409]
     var xOffsets : [Float] = [-69, 18, 37, -30, 5, -65]
     var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65]
-    var rotations : [Float] = [-0.5, -0.13, 0.32, 0.42, 0.2, 0.11]
+    var rotations : [Float] = [-0.5, -0.13, 0.32, 0.42, 0.2, -0.21]
     var tiles: [UIImageView] = []
     
     override func viewDidLoad() {
