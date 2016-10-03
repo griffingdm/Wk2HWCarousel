@@ -14,6 +14,8 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var buttonParentView: UIView!
     @IBOutlet weak var signInField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet var motherView: UIView!
+    @IBOutlet weak var navBarView: UIImageView!
     
     var ogButtonY: CGFloat!
     var ogButtonOffset: CGFloat!
@@ -39,6 +41,24 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             // Any code you put in here will be called when the keyboard is about to hide
             self.buttonParentView.frame.origin.y = self.ogButtonY
             self.signInScrollView.contentOffset.y = 0
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+        
+        signInScrollView.transform = transform
+        navBarView.transform = transform
+        signInScrollView.alpha = 0
+        navBarView.alpha = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.3) { 
+            self.signInScrollView.transform = .identity
+            self.navBarView.transform = .identity
+            self.signInScrollView.alpha = 1
+            self.navBarView.alpha = 1
         }
     }
 
@@ -90,6 +110,13 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func tapOnScreen(_ sender: AnyObject) {
         view.endEditing(true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("\(scrollView.contentOffset.y)")
+        if scrollView.contentOffset.y <= -50 {
+            view.endEditing(true)
+        }
     }
     /*
     // MARK: - Navigation

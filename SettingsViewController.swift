@@ -30,6 +30,20 @@ class SettingsViewController: UIViewController {
         }
     }
 
+    @IBAction func tapSignOutButton(_ sender: AnyObject) {
+        let alertController = UIAlertController(title: "For realz?", message: nil, preferredStyle: .actionSheet)
+        let logoutAction = UIAlertAction(title: "Log out", style: .destructive) { (action) in
+            self.performSegue(withIdentifier: "logoutSegue", sender: self)
+        }
+        let cancelAction = UIAlertAction(title: "Stay logged in", style: .cancel) { (action) in}
+        
+        alertController.addAction(logoutAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
+        
+    }
+    
     /*
     // MARK: - Navigation
 

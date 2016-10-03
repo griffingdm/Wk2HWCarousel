@@ -35,6 +35,8 @@ class IntroScreenViewController: UIViewController, UIScrollViewDelegate {
         introScrollView.delegate = self
         introScrollView.contentSize = introImageView.frame.size
         introScrollView.frame.size = view.frame.size
+        
+        scrollViewDidScroll(introScrollView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,24 +51,31 @@ class IntroScreenViewController: UIViewController, UIScrollViewDelegate {
         let yScroll = scrollView.contentOffset.y
         
         //print("intro scroll \(yScroll)")
-        
         for (index, tile) in tiles.enumerated() {
-            let ty = convertValue(yScroll, r1Min: -20, r1Max: 568, r2Min: CGFloat(yOffsets[index]), r2Max: 0)
+            var ty = convertValue(yScroll, r1Min: -20, r1Max: 568, r2Min: CGFloat(yOffsets[index]), r2Max: 0)
             
-            let tx = convertValue(yScroll, r1Min: -20, r1Max: 568, r2Min: CGFloat(xOffsets[index]), r2Max: 0)
+            var tx = convertValue(yScroll, r1Min: -20, r1Max: 568, r2Min: CGFloat(xOffsets[index]), r2Max: 0)
             
-            let scl = convertValue(yScroll, r1Min: -20, r1Max: 568, r2Min: CGFloat(scales[index]), r2Max: 1)
+            var scl = convertValue(yScroll, r1Min: -20, r1Max: 568, r2Min: CGFloat(scales[index]), r2Max: 1)
             
-            let rot = convertValue(yScroll, r1Min: -20, r1Max: 568, r2Min: CGFloat(rotations[index]), r2Max: 0)
+            var rot = convertValue(yScroll, r1Min: -20, r1Max: 568, r2Min: CGFloat(rotations[index]), r2Max: 0)
             
+            if yScroll > 568 {
+                ty = 0
+                tx = 0
+                scl = 1
+                rot = 0
+            }
+                
             let trans = CGAffineTransform(translationX: tx, y: ty)
             let transScale = trans.scaledBy(x: scl, y: scl)
             let rotTransScale = transScale.rotated(by: rot)
             
             tile.transform = rotTransScale
             
-            print("rotation \(rot)")
+            //print("rotation \(rot)")
         }
+        
     }
 
     /*

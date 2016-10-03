@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D32110C1DA1E61100A89DF1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D32110B1DA1E61000A89DF1 /* SignUpViewController.swift */; };
+		6D32110E1DA1F14400A89DF1 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D32110D1DA1F14400A89DF1 /* TermsViewController.swift */; };
 		6DFAC6681DA01A2B000D6041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFAC6671DA01A2B000D6041 /* AppDelegate.swift */; };
 		6DFAC66A1DA01A2B000D6041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFAC6691DA01A2B000D6041 /* ViewController.swift */; };
 		6DFAC66D1DA01A2B000D6041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DFAC66B1DA01A2B000D6041 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D32110B1DA1E61000A89DF1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
+		6D32110D1DA1F14400A89DF1 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		6DFAC6641DA01A2B000D6041 /* Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFAC6671DA01A2B000D6041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DFAC6691DA01A2B000D6041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		6DFAC65B1DA01A2B000D6041 = {
 			isa = PBXGroup;
 			children = (
+				6D32110D1DA1F14400A89DF1 /* TermsViewController.swift */,
 				6DFAC6661DA01A2B000D6041 /* Carousel */,
 				6DFAC67B1DA01A2C000D6041 /* CarouselTests */,
 				6DFAC6861DA01A2C000D6041 /* CarouselUITests */,
@@ -144,6 +149,7 @@
 		6DFAC6971DA01AE8000D6041 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6D32110B1DA1E61000A89DF1 /* SignUpViewController.swift */,
 				6DFC9BA41DA0440B005C7DCD /* SettingsViewController.swift */,
 				6DFC9BA21DA0426D005C7DCD /* ConversationsViewController.swift */,
 				6DFC9BA01DA03FB7005C7DCD /* FeedViewController.swift */,
@@ -291,10 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D32110E1DA1F14400A89DF1 /* TermsViewController.swift in Sources */,
 				6DFAC6991DA01DF5000D6041 /* LoginViewController.swift in Sources */,
 				6DFAC66A1DA01A2B000D6041 /* ViewController.swift in Sources */,
 				6DFAC6681DA01A2B000D6041 /* AppDelegate.swift in Sources */,
 				6DFC9BA31DA0426D005C7DCD /* ConversationsViewController.swift in Sources */,
+				6D32110C1DA1E61100A89DF1 /* SignUpViewController.swift in Sources */,
 				6DFAC6961DA01AE1000D6041 /* IntroScreenViewController.swift in Sources */,
 				6DFAC69D1DA02D05000D6041 /* TutorialViewController.swift in Sources */,
 				6DFAC69B1DA02837000D6041 /* common.swift in Sources */,
